@@ -1,0 +1,222 @@
+/* Contenedor principal */
+.form-sdc-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Wrapper del formulario */
+.form-sdc-wrapper {
+    width: 80%;
+    height: auto;
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px; 
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border: 2px solid #7CCF53;
+    background-image: url('../assets/imageSdC.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.form-sdc-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); 
+    border-radius: 20px;
+}
+
+/* Encabezado */
+.form-sdc-header {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.form-sdc-header h1 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.form-sdc-header p {
+    font-size: 16px;
+    color: white;
+}
+
+/* Contenedor del formulario */
+.form-sdc {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Contenido izquierdo y derecho */
+.form-sdc-left {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.form-sdc-right {
+    flex: 1;
+    margin-right: 25px;
+}
+
+/* Agrupar campos */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: -5px;
+    font-weight: bold;
+    color: white; /* Texto blanco para las etiquetas */
+}
+
+/* Campos de texto con borde visible */
+input, textarea {
+    width: 100%;
+    max-width: 100%;  
+    padding: 10px;
+    border: 1px solid #5f6b72; /* Borde gris oscuro para mejor contraste */
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333; /* Texto oscuro dentro de las cajas */
+    background-color: #f9f9f9; /* Fondo más claro para las cajas */
+    box-sizing: border-box;
+}
+
+/* Campos con foco */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #8dec51; /* Verde en el borde al enfocar */
+    background-color: #e5f9e1; /* Fondo más claro cuando está en foco */
+}
+
+/* Ajustes de tamaño para el área de texto */
+.form-sdc textarea {
+    resize: none;
+    height: 285px;
+    margin-top: 18px;
+    margin-bottom: 15px;
+}
+
+/* Botón de envío */
+.submit-button {
+    padding: 12px;
+    max-width: 100px;
+    background-color: #8dec51; /* Botón verde */
+    border: none;
+    border-radius: 8px;
+    color: white; 
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: -15px;
+    z-index: 2;
+    color: #000;
+}
+
+.submit-button:hover {
+    background-color: #7ccf53; /* Botón verde oscuro al pasar el cursor */
+}
+
+/* Mensaje de éxito */
+.success-message {
+    margin-top: 10px;
+    color: #28a745;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Pantallas grandes (Desktops y laptops) */
+@media (max-width: 1200px) {
+    .form-sdc-wrapper {
+        padding: 25px;
+    }
+
+    .form-sdc-left,
+    .form-sdc-right {
+        flex: 1;
+    }
+}
+
+/* Pantallas medianas (tabletas y dispositivos más pequeños) */
+@media (max-width: 992px) {
+    .form-sdc-wrapper {
+        padding: 20px;
+    }
+
+    .form-sdc {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-sdc-left,
+    .form-sdc-right {
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .form-sdc-wrapper {
+        padding: 15px;
+    }
+
+    .form-sdc-header h1 {
+        font-size: 20px;
+    }
+
+    .form-sdc-header p {
+        font-size: 14px;
+    }
+
+    .submit-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .form-sdc textarea {
+        height: 250px;
+    }
+}
+
+/* Pantallas muy pequeñas (móviles más pequeños) */
+@media (max-width: 480px) {
+    .form-sdc-wrapper {
+        padding: 10px;
+    }
+
+    .form-sdc-header h1 {
+        font-size: 18px;
+    }
+
+    .form-sdc-header p {
+        font-size: 12px;
+    }
+
+    .submit-button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .form-sdc textarea {
+        height: 200px;
+    }
+}

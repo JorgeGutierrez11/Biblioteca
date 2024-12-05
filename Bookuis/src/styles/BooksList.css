@@ -1,0 +1,244 @@
+.books-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 5px 10px;
+}
+
+
+.books-list .search-container {
+  padding: 10px;
+  max-width: 1200px;
+  margin: 20px;
+  background-color: #ffffff;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px 1px;
+}
+
+.books-list .search-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.books-list .search-container h1 {
+  font-size: 35px;
+  color: white;
+  margin-bottom: -10px;
+  font-weight: 600;
+  letter-spacing: 1.0px;
+  font-style: italic;
+}
+
+.books-list .search-container h2 {
+  font-size: 22px;
+  color: white;
+  margin-bottom: -10px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.books-list .search-bar {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  /* Centra los elementos horizontalmente */
+  align-items: center;
+  /* Alinea los elementos en el eje vertical */
+  margin-top: 10px;
+}
+
+.books-list .search-bar input {
+  width: 520px;
+  /* Ajusta el tamaño del input según sea necesario */
+  padding: 10px 18px;
+  border: 1px solid #ced6e0;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #2d3436;
+  background-color: #f9fafc;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.books-list .search-bar button {
+  width: 50px;
+  /* Ajusta el tamaño del botón */
+  height: 43px;
+  /* Ajusta la altura del botón */
+  background: #7CCF53;
+  color: transparent;
+  /* Hacer el texto invisible */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.books-list .search-bar button:hover {
+  background: #6bbf47;
+  transform: scale(0.95);
+}
+
+.books-list .search-bar button img {
+  width: 24px;
+  /* Ajusta el tamaño del ícono */
+  height: 24px;
+  fill: black;
+  /* Color negro para el ícono */
+}
+
+
+.books-list .search-bar button svg {
+  width: 24px;
+  height: 24px;
+  fill: black;
+}
+
+.books-list .books-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  width: 90%;
+  padding: 20px 0;
+}
+
+.books-list .book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  height: 340px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.books-list .book-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: #43ff1e;
+}
+
+
+
+.books-list .book-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.books-list .book-card h3 {
+  font-size: 18px;
+  color: #2d3436;
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.books-list .book-card p {
+  font-size: 14px;
+  color: #636e72;
+  text-align: center;
+  font-weight: 400;
+}
+
+.loading {
+  font-size: 20px;
+  color: black;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .books-list .search-bar input {
+    width: 100%;
+  }
+
+  .books-list .book-card {
+    width: 200px;
+    height: 340px;
+  }
+
+  .books-list .search-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .books-list .search-container {
+    padding: 15px;
+  }
+
+  .books-list .search-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .books-list .book-card {
+    width: 180px;
+    height: 320px;
+  }
+}
+
+.category-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; 
+  margin: 16px 0; 
+}
+
+.category-filter label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333; 
+}
+
+.category-filter select {
+  width: 100%;
+  max-width: 300px; 
+  padding: 8px 12px;
+  font-size: 16px;
+  font-family: inherit;
+  border: 1px solid #ccc; 
+  border-radius: 30px; 
+  background-color: #f9f9f9; 
+  color: #333; 
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.category-filter select:focus {
+  outline: none; 
+  border-color: #92db64; 
+  box-shadow: 0 0 4px rgba(146, 219, 100, 0.8); 
+  background-color: #fff;
+}
+
+.category-filter select:hover {
+  border-color: #92db64; 
+}
+
+.category-filter option {
+  font-size: 14px;
+  padding: 5px;
+  background-color: #fff; 
+  color: #333;
+}

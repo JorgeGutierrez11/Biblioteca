@@ -1,0 +1,204 @@
+.tab-bg {
+    background-color: #A4F573;
+    width: 90%;
+    padding-bottom: 5px;
+    height: auto;
+    margin: auto;
+}
+
+.tab-container {
+    position: relative;
+    width: 99%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 120em;
+    background-color: #fff;
+}
+
+/* tabs */
+.tab-ul {
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 5px;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #A4F573;
+}
+
+.tab-li {
+    padding: 0.8em 0.6em;
+    cursor: pointer;
+    caret-color: transparent;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    font-size: 0.9rem;
+    background-color: #B8E8A2;
+    color: #666666;
+}
+
+.tab-li.visible {
+    background-color: #FFF;
+    color: #333333;
+    box-shadow: none;
+    transform: scale(1.1);
+}
+
+.tab-li:hover:not(.visible) {
+    background-color: #92DB64;
+}
+
+/* Buscador */
+.tab-input {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 900px;
+    margin: 2px;
+}
+
+.tab-input input {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.tab-boton-search {
+    position: absolute;
+    right: 1px;
+    padding: 5px 12px;
+    background-color: #A4F573;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 3;
+    transition: background-color 0.4s ease, transform 0.3s ease-in-out;
+}
+
+.tab-boton-search:hover {
+    background-color: #92db64;
+    transform: scale(0.9);
+}
+
+/* Libros */
+.books-container,
+.reservas-container,
+.pretamos-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 16px;
+    gap: 16px;
+}
+
+.book-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+}
+
+/* Modal para detalles del libro */
+.book-details-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 300px;
+    height: 250px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content-1>h2,
+.modal-content-1>p {
+    color: #000;
+}
+
+.modal-content-2 {
+    width: 35%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-content-2 img {
+    width: 100%;
+    min-width: 95px;
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    object-fit: contain;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: #333;
+}
+
+.reserve-button {
+    background-color: #A4F573;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.reserve-button:hover {
+    background-color: #92DB64;
+    transform: scale(1.05);
+}

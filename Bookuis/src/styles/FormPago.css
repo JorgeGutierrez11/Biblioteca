@@ -1,0 +1,124 @@
+/* Fondo principal del módulo */
+.form-pago-container {
+    background-color: #fff; /* Fondo blanco del módulo */
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Tarjeta del formulario */
+  .form-pago-card {
+    background-image: url('../assets/imagenPAGO.jpeg.jpg'); /* Imagen como fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    border: 2px solid #7CCF53;
+  }
+  
+  /* Marca de agua oscura */
+  .form-pago-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Filtro oscuro */
+    z-index: 1;
+  }
+  
+  /* Título del formulario */
+  .form-pago-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Subtítulo */
+  .form-pago-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Campos del formulario */
+  .form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+  }
+  
+  label {
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  input:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  .error-input {
+    border: 2px solid #ff6b6b;
+  }
+  
+  .error-message {
+    color: #ff6b6b;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+  }
+  
+  /* Botón de pago */
+  .form-pago-button {
+    background-color: #7CCF53; /* Botón verde */
+    color: #fff;
+    font-weight: bold;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    z-index: 4;
+    position: relative;
+  }
+  
+  .form-pago-button:hover {
+    background-color: #5BAF3B; /* Hover más oscuro */
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .form-pago-card {
+      padding: 1.5rem;
+      max-width: 90%;
+    }
+  }
+  
+  
